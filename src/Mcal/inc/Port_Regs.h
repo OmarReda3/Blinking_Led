@@ -16,7 +16,7 @@
 #include "Std_Types.h"
 
 #define UNLOCK_VALUE              0x4C4F434B
-#define SYSCTL_REGCGC2_REG        (*((volatile uint32 *)0x400FE108))
+#define SYSCTL_REGCGC2_REG       (*((volatile uint32*)0x400FE108))
 
 /* GPIO Registers base addresses */
 #define GPIO_PORTA_BASE_ADDRESS           0x40004000

@@ -13,6 +13,12 @@
 #ifndef COMMON_MACROS
 #define COMMON_MACROS
 
+/* Enable Exceptions ... This Macro enable IRQ interrupts, Programmble Systems Exceptions and Faults by clearing the I-bit in the PRIMASK. */
+#define Enable_Interrupt()    __asm("CPSIE I")
+
+/* Disable Exceptions ... This Macro disable IRQ interrupts, Programmble Systems Exceptions and Faults by clearing the I-bit in the PRIMASK. */
+#define Disable_Interrupt()   __asm("CPSID I")
+
 /* Set a certain bit in any register */
 #define SET_BIT(REG,BIT) (REG|=(1<<BIT))
 

@@ -61,7 +61,7 @@ void Port_Init(const Port_ConfigType* ConfigPtr)
             delay = SYSCTL_REGCGC2_REG;
 
 
-            if( ((PortConf_PORTD_NUM == (Port_Channels[i].port_num)) && (PortConf_PIN7_NUM == (Port_Channels[i].pin_num))) || ((PortConf_PORTF_NUM == (Port_Channels[i].port_num)) && (PortConf_PIN0_NUM == (Port_Channels[i].pin_num))) ) /* PD7 or PF0 */
+            if(((PortConf_PORTD_NUM == (Port_Channels[i].port_num)) && (PortConf_PIN7_NUM == (Port_Channels[i].pin_num))) || ((PortConf_PORTF_NUM == (Port_Channels[i].port_num)) && (PortConf_PIN0_NUM == (Port_Channels[i].pin_num))) ) /* PD7 or PF0 */
             {
               *(volatile uint32 *)((volatile uint8 *)Port_Ptr + PORT_LOCK_REG_OFFSET) = UNLOCK_VALUE;                     /* Unlock the GPIOCR register */
               SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr + PORT_COMMIT_REG_OFFSET) , (Port_Channels[i].pin_num));  /* Set the corresponding bit in GPIOCR register to allow changes on this pin */

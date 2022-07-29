@@ -13,7 +13,7 @@
 #define PORT_CFG_H
 
 /* Number of the configured Port Channels */
-#define PORT_CONFIGURED_CHANNLES              (39U)
+#define PORT_CONFIGURED_CHANNLES              (37U)
 
 
 /* Port numbers definitons */
